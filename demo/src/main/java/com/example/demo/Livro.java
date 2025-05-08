@@ -1,4 +1,4 @@
-package br.pucrs.nomeusuario.exemplo;
+package com.example.demo;
 
 public class Livro {
     private int id;

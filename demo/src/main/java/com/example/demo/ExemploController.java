@@ -1,18 +1,16 @@
-package br.pucrs.nomeusuario.exemplo;
+package com.example.demo;
 
 import java.util.*;
 import org.springframework.http.*;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.beans.factory.annotation.Autowired;
 
 
 @RestController
 @RequestMapping("/biblioteca")
 public class ExemploController {
-    private Acervo acervo;
+    private AcervoRepoJdbcImpl acervo;
 
-    @Autowired
-    public ExemploController(Acervo acervo) {
+    public ExemploController(AcervoRepoJdbcImpl acervo) {
         this.acervo = acervo;        
     }
 
@@ -31,10 +29,10 @@ public class ExemploController {
         return acervo.getTitulos();
     }
 
-    @GetMapping("/autores")
+    /* @GetMapping("/autores")
     public List<String> getListaAutores() {
         return acervo.getListaAutores();
-    }
+    } */
 
     @GetMapping("/livrosautor")
     public List<Livro> getLivrosDoAutor(@RequestParam(value = "autor") String autor) {

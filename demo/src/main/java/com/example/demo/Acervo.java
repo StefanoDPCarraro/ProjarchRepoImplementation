@@ -1,5 +1,4 @@
-package br.pucrs.nomeusuario.exemplo;
-
+package com.example.demo;
 import java.util.*;
 import org.springframework.http.*;
 import org.springframework.stereotype.Component;
